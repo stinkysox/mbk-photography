@@ -1,0 +1,371 @@
+.sectionOne {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+  padding: 50px 20px;
+  background: #ffe2e2;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.sectionOne h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: "Monomakh", system-ui;
+
+  color: #222;
+}
+
+.sectionOne span {
+  color: #f04;
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 2rem;
+}
+
+.sectionOne p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+
+  justify-content: center;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Cedarville Cursive", cursive;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.primary-btn {
+  background: #f04;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(240, 4, 4, 0.3);
+}
+
+.primary-btn:hover {
+  background: #c03;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #f04;
+  color: #f04;
+}
+
+.secondary-btn:hover {
+  background: #f04;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionTwo {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  gap: 30px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.profile-image {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+  flex: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Monomakh", system-ui;
+
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.qualification {
+  font-style: italic;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.bio {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.insta-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f04;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(240, 4, 4, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.insta-btn:hover {
+  background: #c03;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionThree {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffe2e2;
+}
+
+.sectionThree h1 {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.package-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  gap: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-image {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.package-content {
+  text-align: left;
+  flex: 1;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f04;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(240, 4, 4, 0.3);
+  transition: all 0.3s ease-in-out;
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.contact-btn:hover {
+  background: #c03;
+}
+
+@media (max-width: 768px) {
+  .package-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .package-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .package-content {
+    text-align: center;
+  }
+}
+
+.studio {
+  display: flex;
+  flex-direction: column; /* Ensures the heading appears first */
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.studio h1 {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.studio p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.studio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.studio-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.studio-card:hover {
+  transform: translateY(-5px);
+}
+
+.studio-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media (max-width: 768px) {
+  .sectionOne p {
+    font-size: 14px;
+  }
+
+  .sectionTwo {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .sectionTwo p {
+    font-size: 14px;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .studio {
+    padding: 30px;
+  }
+
+  .studio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .studio-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+.portfolio {
+  text-align: center;
+  background-color: #ffe2e2;
+  padding: 10px;
+  padding-bottom: 40px;
+}
+
+.portfolio h1 {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.testimonials {
+  margin-top: 40px;
+}
+
+.testimonials h1 {
+  font-family: "Cedarville Cursive", cursive;
+}
