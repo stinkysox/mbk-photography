@@ -25,6 +25,7 @@ body {
   position: relative;
   font-family: "Cedarville Cursive", cursive;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 .nav-logo-image {
   height: 80px;
@@ -57,7 +58,7 @@ body {
 }
 
 .btn {
-  background: #f04;
+  background: #222831;
   padding: 8px 15px;
   border-radius: 5px;
   color: white !important;

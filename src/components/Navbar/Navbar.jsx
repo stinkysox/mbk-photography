@@ -25,7 +25,7 @@ const Navbar = () => {
     console.log(id);
     if (id === "bookappointment") {
       window.location.href =
-        "https://api.whatsapp.com/send/?phone=917799000575&text&type=phone_number&app_absent=0";
+        "https://api.whatsapp.com/send/?phone=919963616129&text&type=phone_number&app_absent=0";
       return;
     }
     const section = document.getElementById(id);
@@ -60,8 +60,8 @@ const Navbar = () => {
           {[
             "About mbk photography",
             "My Services",
-            "Studio",
             "Portfolio",
+            "Testimonials",
             "Map",
             "Book Appointment",
           ].map((item, index) => {

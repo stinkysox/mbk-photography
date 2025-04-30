@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./FirstCarousel.css";
 import { BsStars } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const firstCarousel = [
   "https://i.postimg.cc/0ymWZXGX/Whats-App-Image-2025-04-29-at-4-36-46-PM.jpg",
@@ -29,19 +30,29 @@ const FirstCarousel = () => {
 
   return (
     <div className="top-carousel">
-      <div className="first-carousel-container">
+      <motion.div
+        className="first-carousel-container"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <img
           src={firstCarousel[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
           className="carousel-image"
         />
-      </div>
-      <p className="top-para">
+      </motion.div>
+      <motion.p
+        className="top-para"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+      >
         A wedding day filled with magic, captured through our lens.
         <br />
         <BsStars className="star" />
         <FaHeart className="heart" />
-      </p>
+      </motion.p>
     </div>
   );
 };

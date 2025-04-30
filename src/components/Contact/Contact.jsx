@@ -8,7 +8,7 @@ const Contact = () => {
 
   const handleWhatsAppClick = () => {
     window.location.href =
-      "https://wa.me/917799000575?text=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you!";
+      "https://wa.me/919963616129?text=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you!";
   };
 
   return (

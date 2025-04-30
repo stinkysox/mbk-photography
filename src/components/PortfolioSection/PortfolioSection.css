@@ -1,14 +1,5 @@
-/* Portfolio Section Styling */
-.portfolio-section {
-  text-align: center;
-  padding: 60px 20px; /* Increased padding for better spacing */
-  background-color: #f4f4f4;
-  font-family: "Playfair Display", serif;
-  color: #333;
-}
-
 .portfolio-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 30px;
   font-weight: bold;
@@ -20,7 +11,7 @@
   max-width: 90%;
   margin: 0 auto;
   display: flex;
-  justify-content: center; /* Center the slider */
+  justify-content: center;
 }
 
 .portfolio-slide {
@@ -138,7 +129,6 @@
 }
 
 .portfolio-image {
-  width: 500px;
   margin: auto;
   height: 340px;
   object-fit: cover;

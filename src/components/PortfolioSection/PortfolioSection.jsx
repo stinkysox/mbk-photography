@@ -24,7 +24,7 @@ const PortfolioSection = () => {
   };
 
   return (
-    <div className="portfolio-section">
+    <div className="portfolio-section" id="portfolio">
       <h2 className="portfolio-title">My Portfolio</h2>
       <Slider {...settings} className="portfolio-slider">
         {portfolioImages.map((image, index) => (

@@ -4,12 +4,15 @@ import "./AboutMe.css";
 
 const AboutMe = () => {
   return (
-    <section className="about-me">
+    <section className="about-me" id="aboutmbkphotography">
       <div className="about-me-content">
-        <img
+        <motion.img
           src="https://i.postimg.cc/B6xPVD70/Screenshot-2025-04-30-112222-Picsart-Ai-Image-Enhancer.png"
           alt="MBK Photography"
           className="about-me-image"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         />
         <motion.p
           initial={{ opacity: 0, x: -100 }}
