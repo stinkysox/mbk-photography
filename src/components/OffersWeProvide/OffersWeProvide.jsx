@@ -31,7 +31,14 @@ const offers = [
 
 const OffersWeProvide = () => {
   return (
-    <section className="offers-section" id="myservices">
+    <motion.section
+      className="offers-section"
+      id="myservices"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       <div className="container">
         <h2 className="section-title">Offers We Provide</h2>
         <div className="offers-grid">
@@ -39,19 +46,9 @@ const OffersWeProvide = () => {
             <motion.div
               key={index}
               className="offer-card"
-              initial={{
-                x: index % 2 === 0 ? -100 : 100,
-                opacity: 0,
-              }}
-              whileInView={{
-                x: 0,
-                opacity: 1,
-              }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-                delay: index * 0.1,
-              }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
               <div className="image-container">
@@ -67,7 +64,7 @@ const OffersWeProvide = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

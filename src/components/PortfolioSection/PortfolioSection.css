@@ -1,103 +1,7 @@
-.portfolio-title {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-/* Slider */
-.portfolio-slider {
-  max-width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.portfolio-slide {
-  position: relative;
-  display: flex;
-  justify-content: center; /* Ensure the image is centered */
-}
-
-.portfolio-image {
-  width: 100%; /* Set to 100% width of the container */
-  max-width: 500px; /* Maximum width to maintain consistency */
-  height: 320px;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  text-align: center;
-}
-
-.portfolio-image:hover {
-  transform: scale(1.05); /* Slightly increased the zoom effect */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* More subtle shadow for hover */
-}
-
-/* Slick Dots Styling */
-.slick-dots {
-  bottom: 20px;
-  z-index: 10;
-}
-
-.slick-dots li button:before {
-  color: #fff;
-  font-size: 16px; /* Slightly increased the size for better visibility */
-}
-
-.slick-dots li.slick-active button:before {
-  color: #e1306c; /* Instagram color for active dot */
-}
-
-/* Instagram Button Styling */
-.instagram-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e1306c; /* Instagram red/pink color */
-  color: white;
-  padding: 12px 25px; /* Increased padding for a better button feel */
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 30px; /* More spacing between the slider and button */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.instagram-button:hover {
-  background-color: #d4295e; /* Darker shade on hover */
-  transform: translateY(-3px); /* Slight lift effect on hover */
-}
-
-.instagram-icon {
-  font-size: 1.8rem; /* Larger icon for better visibility */
-  margin-right: 10px;
-}
-
-.instagram-button span {
-  font-size: 1.1rem; /* Increased text size for better readability */
-}
-
-/* Responsive Styling for Mobile */
-@media screen and (max-width: 768px) {
-  .portfolio-title {
-    font-size: 2rem; /* Adjust title size for smaller screens */
-  }
-
-  .portfolio-image {
-    height: 250px; /* Reduce height on mobile for better fit */
-  }
-
-  .instagram-button {
-    padding: 10px 20px; /* Smaller padding for mobile screens */
-  }
-}
 /* Portfolio Section Styling */
 .portfolio-section {
   text-align: center;
-  padding: 60px 20px; /* Increased padding for better spacing */
+  padding: 60px 20px;
   background-color: #f4f4f4;
   font-family: "Playfair Display", serif;
   color: #333;
@@ -105,55 +9,41 @@
 
 .portfolio-title {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 30px;
   font-weight: bold;
+  margin-bottom: 30px;
   letter-spacing: 1px;
+  color: #333;
 }
 
-/* Slider */
-.portfolio-slider {
-  max-width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center; /* Center the entire slider */
-  align-items: center; /* Center content vertically */
-  position: relative;
+/* Grid Layout for Portfolio Images (Binto Layout) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Auto-adjust grid columns */
+  gap: 20px;
+  padding: 20px;
 }
 
-.portfolio-slide {
+.portfolio-card {
   position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  overflow: hidden;
 }
 
 .portfolio-image {
-  margin: auto;
-  height: 340px;
+  width: 100%;
+  height: 320px;
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
 }
 
 .portfolio-image:hover {
-  transform: scale(1.05); /* Slightly increased the zoom effect */
-}
-
-/* Slick Dots Styling */
-.slick-dots {
-  bottom: 20px;
-  z-index: 10;
-}
-
-.slick-dots li button:before {
-  color: #fff;
-  font-size: 16px; /* Slightly increased the size for better visibility */
-}
-
-.slick-dots li.slick-active button:before {
-  color: #e1306c; /* Instagram color for active dot */
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Instagram Button Styling */
@@ -161,41 +51,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e1306c; /* Instagram red/pink color */
+  background-color: #e1306c;
   color: white;
-  padding: 12px 25px; /* Increased padding for a better button feel */
+  padding: 12px 25px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  margin-top: 30px; /* More spacing between the slider and button */
+  margin-top: 40px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .instagram-button:hover {
-  background-color: #d4295e; /* Darker shade on hover */
-  transform: translateY(-3px); /* Slight lift effect on hover */
+  background-color: #d4295e;
+  transform: translateY(-3px);
 }
 
 .instagram-icon {
-  font-size: 1.8rem; /* Larger icon for better visibility */
+  font-size: 1.8rem;
   margin-right: 10px;
 }
 
 .instagram-button span {
-  font-size: 1.1rem; /* Increased text size for better readability */
+  font-size: 1.1rem;
 }
 
-/* Responsive Styling for Mobile */
+/* Responsive Styling */
 @media screen and (max-width: 768px) {
   .portfolio-title {
-    font-size: 2rem; /* Adjust title size for smaller screens */
+    font-size: 2rem;
   }
 
   .portfolio-image {
-    height: 250px; /* Reduce height on mobile for better fit */
+    height: 250px; /* Adjust height on smaller screens */
   }
 
   .instagram-button {
-    padding: 10px 20px; /* Smaller padding for mobile screens */
+    padding: 10px 20px; /* Smaller padding on mobile */
   }
 }

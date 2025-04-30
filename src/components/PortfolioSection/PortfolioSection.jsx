@@ -1,9 +1,6 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaInstagram } from "react-icons/fa"; // Import Instagram icon
-import "./PortfolioSection.css"; // We'll add custom styling here
+import { FaInstagram } from "react-icons/fa";
+import "./PortfolioSection.css";
 
 const portfolioImages = [
   "https://i.postimg.cc/T15Yp5Fs/Sonika-wedding-21-1.jpg",
@@ -12,23 +9,13 @@ const portfolioImages = [
 ];
 
 const PortfolioSection = () => {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-    adaptiveHeight: true,
-  };
-
   return (
     <div className="portfolio-section" id="portfolio">
       <h2 className="portfolio-title">My Portfolio</h2>
-      <Slider {...settings} className="portfolio-slider">
+
+      <div className="portfolio-grid">
         {portfolioImages.map((image, index) => (
-          <div key={index} className="portfolio-slide">
+          <div key={index} className="portfolio-card">
             <img
               src={image}
               alt={`Portfolio Image ${index + 1}`}
@@ -36,7 +23,7 @@ const PortfolioSection = () => {
             />
           </div>
         ))}
-      </Slider>
+      </div>
 
       <a
         href="https://www.instagram.com/mbk_photography_9/"
