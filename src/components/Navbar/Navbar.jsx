@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaHeart } from "react-icons/fa";
+
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -10,7 +12,6 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Detect scroll to shrink the logo
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50); // Shrink logo after scrolling 50px
@@ -47,18 +48,18 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <motion.img
-          src="https://i.postimg.cc/gkVLxsQ5/rishita-setty-logo.png"
+          src="https://i.postimg.cc/B6xPVD70/Screenshot-2025-04-30-112222-Picsart-Ai-Image-Enhancer.png"
           alt="Logo"
           className="nav-logo-image"
-          animate={{ height: isScrolled ? 40 : 50 }} // Shrinks smoothly
+          animate={{ height: isScrolled ? 60 : 80 }} // now allows larger height
           transition={{ duration: 0.3, ease: "easeOut" }}
         />
       </div>
       <AnimatePresence>
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
           {[
-            "About Rishita Setty",
-            "Photography Packages",
+            "About mbk photography",
+            "My Services",
             "Studio",
             "Portfolio",
             "Map",

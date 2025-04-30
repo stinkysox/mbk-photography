@@ -12,25 +12,26 @@ body {
 }
 
 .nav-links a:hover {
-  color: #f04;
+  color: #222831;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: white;
+  padding: 10px 25px;
+  background: #fefbf5;
   color: black;
   position: relative;
   font-family: "Cedarville Cursive", cursive;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .nav-logo-image {
-  height: 54px;
-  cursor: pointer;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -79,10 +80,10 @@ body {
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 100px;
     left: 0;
     width: 100%;
-    background: white;
+    background: #fefbf5;
     flex-direction: column;
     text-align: center;
     opacity: 0;

@@ -1,76 +1,63 @@
 import React from "react";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { motion } from "framer-motion";
 import "./Testimonials.css";
-const Testimonial = () => {
+
+const testimonials = [
+  {
+    name: "Aarav Mehta",
+    stars: 5,
+    review:
+      "Absolutely loved the experience! The team was professional and captured every moment perfectly.",
+  },
+  {
+    name: "Nisha Kapoor",
+    stars: 4,
+    review:
+      "Wonderful service and great attention to detail. Would definitely recommend to others!",
+  },
+  {
+    name: "Kabir Verma",
+    stars: 5,
+    review:
+      "A cinematic masterpiece! The output exceeded our expectations. Will hire again!",
+  },
+  {
+    name: "Rhea Malhotra",
+    stars: 5,
+    review:
+      "The photos had so much emotion and beauty in them. I was moved to tears. Thank you!",
+  },
+];
+
+const Testimonials = () => {
   return (
-    <section className="testimonial-section light">
-      <div className="testimonial-container">
-        <div className="testimonial-heading">
-          <h2>Customer Reviews</h2>
-          <p>
-            See what our valued customers have to say about their experience
-            with us. Their feedback inspires us to keep delivering the best
-            service possible.
-          </p>
-        </div>
-
-        <div className="testimonial-item">
-          <div className="testimonial-item-image">
-            <img
-              src="https://i.postimg.cc/VsMSJwV4/852583511c3109d7a4efa0c3a233be1e.jpg"
-              alt="Akshay Kumar"
-            />
-          </div>
-          <div className="testimonial-item-content">
-            <h4>Bhavya Ch</h4>
-            <p className="testimonial-rating">
-              <FaStar className="active" />
-              <FaStar className="active" />
-              <FaStar className="active" />
-              <FaStarHalfAlt className="active" />
-              <FaRegStar className="inactive" />
-            </p>
-            <p className="testimonial-text">
-              I just can't get over how amazing the photos turned out. My entire
-              family is just in awe of your talent! You captured every
-              expression of my babies, and cute smile in such a beautiful,
-              natural manner and with excellent service, great work, the best
-              quality of pictures! Overall I am totally satisfied with Rishita.
-              she is very professional and will make the best. <br /> Thank you
-              Rishita.
-            </p>
-          </div>
-        </div>
-
-        <div className="testimonial-item reverse">
-          <div className="testimonial-item-image">
-            <img
-              src="https://i.postimg.cc/8cVzRF04/Pin-by-michelle-on-power-point-Video-in-2022-Ilustrasi-flat-Ilustrasi-karakter-Kartun.jpg"
-              alt="Raima Ray"
-            />
-          </div>
-          <div className="testimonial-item-content">
-            <h4>Archana Penumacha</h4>
-            <p className="testimonial-rating">
-              <FaStar className="active" />
-              <FaStar className="active" />
-              <FaStar className="active" />
-              <FaStarHalfAlt className="active" />
-              <FaRegStar className="inactive" />
-            </p>
-            <p className="testimonial-text">
-              All I can say is WOW. She is amazing with her photography. I
-              highly recommend that if you are looking for the best photographer
-              book her today. In love with the photos she clicked of my baby
-              boy. We will cherish these photos forever! I look forward to
-              returning for more photos in the future. Thanks Rishitha garu for
-              the wonderful pictures.
-            </p>
-          </div>
-        </div>
+    <section className="testimonials">
+      <h3>What Our Clients Say</h3>
+      <div className="testimonials-grid">
+        {testimonials.map((item, index) => (
+          <motion.div
+            className="testimonial-card"
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.05, // Scale up slightly on hover instead of translateY
+              transition: { duration: 0.2, ease: "easeInOut" },
+            }} // Use scale and ease for a smoother transition
+          >
+            <h4>{item.name}</h4>
+            <div className="stars">
+              {"★".repeat(item.stars)}
+              {"☆".repeat(5 - item.stars)}
+            </div>
+            <p>"{item.review}"</p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default Testimonial;
+export default Testimonials;

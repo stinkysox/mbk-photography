@@ -1,0 +1,30 @@
+.about-me {
+  padding: 4rem 2rem;
+  background-color: #fefbf5;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.about-me-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about-me-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.about-me p:last-of-type {
+  margin-bottom: 0;
+}

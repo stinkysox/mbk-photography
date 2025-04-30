@@ -49,14 +49,11 @@ const Contact = () => {
           </svg>
         </div>
         <div className="contact-container">
-          <div className="contact-card email-card" onClick={handleEmailClick}>
-            <h2>Email</h2>
-          </div>
           <div
             className="contact-card whatsapp-card"
             onClick={handleWhatsAppClick}
           >
-            <h2>📞7799000575 </h2>
+            <h2>+91 99636 16129</h2>
           </div>
         </div>
       </section>

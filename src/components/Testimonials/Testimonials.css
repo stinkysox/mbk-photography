@@ -1,118 +1,59 @@
-.testimonial-section {
-  padding: 3.5rem 0;
-  background-color: #ffffff;
-  color: #27272a;
-}
-
-.testimonial-section.light {
-  background-color: #ffffff;
-  color: #27272a;
-}
-
-.testimonial-section.dark {
-  background-color: #0b1727;
-  color: #ffffff;
-}
-
-.testimonial-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.testimonial-heading {
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: #222831;
   text-align: center;
-  margin-bottom: 1.5rem;
+  font-family: "Playfair Display", serif;
 }
 
-.testimonial-heading h2 {
-  font-size: 1.875rem;
-  line-height: 1;
-  font-weight: bold;
+.testimonials h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: whitesmoke;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* Ensure it stays on top */
+  transition: transform 0.3s ease; /* Adding smooth transition */
+}
+
+.client-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 1rem;
-  padding: 8px;
 }
 
-.testimonial-heading p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.testimonial-item {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.testimonial-item.reverse {
-  flex-direction: column;
-}
-
-@media (min-width: 768px) {
-  .testimonial-item {
-    flex-direction: row;
-    align-items: center;
-  }
-  .testimonial-item.reverse {
-    flex-direction: row-reverse;
-  }
-}
-
-.testimonial-item-image {
-  flex: 0 0 40%;
-}
-
-.testimonial-item-image img {
-  width: 100%;
-  border-radius: 0.25rem;
-}
-
-.testimonial-item-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 1rem;
-}
-
-.testimonial-item-content h4 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
-
-.testimonial-title {
-  font-style: italic;
+.testimonial-card h4 {
   margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #111;
 }
 
-.testimonial-rating {
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
+.stars {
+  color: #f5a623;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-.testimonial-rating .active {
-  color: #f59e0b;
-  margin-right: 0.25rem;
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #444;
+  font-style: italic;
 }
 
-.testimonial-rating .inactive {
-  color: #fde68a;
-  opacity: 0.2;
-  margin-right: 0.25rem;
-}
-
-.testimonial-text {
-  opacity: 0.8;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-@media (min-width: 1024px) {
-  .testimonial-text {
-    padding-right: 5rem;
-  }
-}
+/* Hover effect handled by Framer Motion, no need for CSS hover */
